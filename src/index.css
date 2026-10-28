@@ -1,42 +1,54 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colors */
-  --color-primary-50: #f0fdfa;
-  --color-primary-100: #ccfbf1;
-  --color-primary-200: #99f6e4;
-  --color-primary-300: #5eead4;
-  --color-primary-400: #2dd4bf;
-  --color-primary-500: #14b8a6;
-  --color-primary-600: #0d9488;
-  --color-primary-700: #0f766e;
-  --color-primary-800: #115e59;
-  --color-primary-900: #134e4a;
+  /* Brand palette from design document */
+  --color-ink: #0b2e36;
+  --color-deep-teal: #0e4f5c;
+  --color-teal: #0e7c86;
+  --color-mint: #3fa796;
+  --color-amber: #f2a541;
+  --color-coral: #e4572e;
+  --color-mist: #eaf2f3;
 
-  /* Priority colors */
-  --color-priority-low: #94a3b8;
-  --color-priority-medium: #eab308;
-  --color-priority-high: #f97316;
-  --color-priority-urgent: #ef4444;
+  /* Mapping to semantic names used across the app */
+  --color-primary-50: #eaf2f3;
+  --color-primary-100: #d3e6e8;
+  --color-primary-200: #a7cdd2;
+  --color-primary-300: #6fadb5;
+  --color-primary-400: #3fa796;
+  --color-primary-500: #0e7c86;
+  --color-primary-600: #0e4f5c;
+  --color-primary-700: #0b3d47;
+  --color-primary-800: #082e36;
+  --color-primary-900: #0b2e36;
 
-  /* Neutral surfaces */
+  /* Priority (matches design doc) */
+  --color-priority-low: #3fa796;
+  --color-priority-medium: #f2a541;
+  --color-priority-high: #e4572e;
+  --color-priority-urgent: #e4572e;
+
+  /* Surfaces */
   --color-surface: #ffffff;
-  --color-surface-muted: #f8fafc;
-  --color-border: #e2e8f0;
+  --color-surface-muted: #eaf2f3;
+  --color-border: #d3e6e8;
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Figtree', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
 }
 
-/* Base styles */
 body {
   font-family: var(--font-sans);
   background-color: var(--color-surface-muted);
-  color: #1e293b;
+  color: var(--color-ink);
 }
 
-/* Focus styles for accessibility */
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
 *:focus-visible {
-  outline: 2px solid var(--color-primary-500);
+  outline: 2px solid var(--color-teal);
   outline-offset: 2px;
 }
